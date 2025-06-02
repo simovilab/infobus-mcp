@@ -1,0 +1,1 @@
+# Infobús MCP (cliente)
