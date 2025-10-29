@@ -1,6 +1,6 @@
 from typing import Any
 import httpx
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 # Initialize FastMCP server
 mcp = FastMCP("transit")
@@ -30,10 +30,10 @@ def format_next_arrival(arrival: dict) -> str:
     if not arrival:
         return "No arrival data available."
     return f"""
-Route short name: {arrival.get('route_short_name', 'Unknown')}
-Route long name: {arrival.get('route_long_name', 'Unknown')}
-Going to (headsign): {arrival.get('trip_headsign', 'Unknown')}
-Arrival time: {arrival.get('arrival_time', 'Unknown')}
+Route short name: {arrival.get("route_short_name", "Unknown")}
+Route long name: {arrival.get("route_long_name", "Unknown")}
+Going to (headsign): {arrival.get("trip_headsign", "Unknown")}
+Arrival time: {arrival.get("arrival_time", "Unknown")}
 """
 
 
