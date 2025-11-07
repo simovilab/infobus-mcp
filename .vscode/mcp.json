@@ -1,6 +1,6 @@
 {
 	"servers": {
-		"uv run server/transit.py": {
+		"Transit": {
 			"type": "stdio",
 			"command": "uv",
 			"args": [
